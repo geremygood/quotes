@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block title %}QUOTES{% endblock %}
+
+{% block content %}
+{% if latest_quote_list %}
+    <ul>
+    {% for quote in latest_quote_list %}
+    <li>
+        <blockquote>“<a href="/{{ quote.id }}/">{{ quote.quote_text }}”</a></blockquote>
+        – <a href="{{ quote.author.wiki_link  }}">{{ quote.author.first_name }} {{ quote.author.last_name }}</a>
+    </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>“No quotes are available right now.”</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <meta http-equiv="=ent-Type" content="text/html;charset=utf-8" >
+
+    <link rel="stylesheet" type="text/css" href="{% static user_stylesheet %}">
+    {%comment%}   <link rel="stylesheet" href="{% static %}/main.css" type="text/css" media="screen" />{%endcomment%}
+</head>
+
+<body>
+
+    {% block content %}
+
+
+
+    {% endblock %}
+</body>
+</html>

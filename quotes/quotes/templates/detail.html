@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block title %}QUOTES{% endblock %}
+
+{% block content %}
+<section id="quote">
+<blockquote>
+    {{ quote.quote_text }}
+</blockquote>
+<cite>
+    <a target="_blank" href="{{ quote.author.wiki }}">
+    {{ quote.author.first_name }}
+    {{ quote.author.last_name }} 
+    </a>
+</cite>
+</quote>
+{% endblock %}
